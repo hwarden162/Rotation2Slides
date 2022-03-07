@@ -1,0 +1,35 @@
+---
+title: "Rotation Project"
+author: "Hugh Warden - Kudla Lab"
+date: "31/03/2022"
+output: 
+  ioslides_presentation:
+    theme: flatly
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+```{r preload packages, message=FALSE, warning=FALSE}
+library(tidyverse)
+library(tidymodels)
+library(highcharter)
+```
+
+# Introduction
+
+## Hello
+
+```{r, echo = TRUE}
+print("Hello")
+```
+
+```{r highchart}
+highchart() %>%
+  hc_xAxis(categories = month.abb) %>%
+  hc_add_series(name = "Tokyo", data = sample(1:12))
+```
+
+
+
